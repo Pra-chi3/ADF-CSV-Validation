@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure Blob Upload</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f9f9f9;
+          margin: 0;
+          padding: 20px;
+      }
+      h2 {
+          color: #333;
+      }
+      input[type="file"] {
+          display: block;
+          margin-bottom: 10px;
+      }
+      input[type="button"] {
+          padding: 10px 20px;
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      input[type="button"]:hover {
+          background-color: #45a049;
+      }
+      #span {
+          font-size: 14px;
+          margin-top: 10px;
+          display: inline-block;
+      }
+      hr {
+          border: 1px solid #ccc;
+          margin: 20px 0;
+      }
+      #csv-data-container {
+          padding: 10px;
+          background-color: white;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+      }
+      table, th, td {
+          border: 1px solid #ddd;
+      }
+      th, td {
+          padding: 12px;
+          text-align: left;
+      }
+      th {
+          background-color: #f2f2f2;
+      }
+      tr:nth-child(even) {
+          background-color: #f9f9f9;
+      }
+      tr:hover {
+          background-color: #f1f1f1;
+      }
+  </style>
+</head>
+<body>
+  
+  <h2>Upload CSV file</h2>
+
+  <input type="file" id="file-input" accept=".csv">
+  <input type="button" id="upload-button" value="Upload File"> <br> <br> <br>
+  <input type="button" id="download-button" value="Download" style="display:none;">
+  <span id="span" style="color: red; display: none;">* Please download the incorrect data submitted and reupload with the correct ones.</span>
+  
+  <hr>
+  <h2>ADF Status Details</h2>
+  <div id="csv-data-container">Loading data...</div>
+  <script src="dist/bundle.js"></script>
+</body>
+</html>
