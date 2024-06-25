@@ -77,10 +77,12 @@ A Web application that allows users to upload CSV files containing user details.
       <li>Capture relevant pipeline execution details such as run ID, trigger time, and status (Success or Failure).</li></h3>
 
 <h2>Fetching and Displaying CSV Data</h2>
+<ul>
+<li>The script fetches CSV data from Azure Blob Storage using the Blob Service Client.</li>
 
-<p>The script fetches CSV data from Azure Blob Storage using the Blob Service Client.
 
+<li>The fetchData function attempts to download CSV files from Blob Storage in a specified order until one succeeds.</li>
 
- The fetchData function attempts to download CSV files from Blob Storage in a specified order until one succeeds.
-
-The streamToString function converts the downloaded stream to a string. The parseCSV function parses the CSV string into an array of arrays (headers and rows). The displayCSVData function dynamically creates and populates an HTML table with the parsed CSV data.
+<li>The streamToString function converts the downloaded stream to a string. The parseCSV function parses the CSV string into an array of arrays (headers and rows). </li>
+<li>The displayCSVData function dynamically creates and populates an HTML table with the parsed CSV data.<li>
+</ul>
