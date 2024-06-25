@@ -84,5 +84,5 @@ A Web application that allows users to upload CSV files containing user details.
 <li>The fetchData function attempts to download CSV files from Blob Storage in a specified order until one succeeds.</li>
 
 <li>The streamToString function converts the downloaded stream to a string. The parseCSV function parses the CSV string into an array of arrays (headers and rows). </li>
-<li>The displayCSVData function dynamically creates and populates an HTML table with the parsed CSV data.<li>
+<li>The displayCSVData function dynamically creates and populates an HTML table with the parsed CSV data.</li>
 </ul>
